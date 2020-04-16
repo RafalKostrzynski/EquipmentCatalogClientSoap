@@ -22,10 +22,10 @@ public class KataloSprzetuClientApplication {
             student = args[0];
         }
         RegisterCallResponse registerCallResponse = equipmentCatalogClient.getRegisterCall(student);
-        System.out.println(registerCallResponse.getExercise().getName());
-        System.out.println(registerCallResponse.getExercise().getNote());
+        System.err.println(registerCallResponse.getExercise().getName());
+        System.err.println(registerCallResponse.getExercise().getNote());
         ResultsResponse resultsResponse = equipmentCatalogClient.getResults(student);
-        System.out.println(resultsResponse.getEntry());
+        System.err.println(resultsResponse.getEntry());
     };
     }
 }
